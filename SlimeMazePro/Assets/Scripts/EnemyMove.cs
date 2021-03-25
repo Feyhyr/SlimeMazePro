@@ -75,7 +75,6 @@ public class EnemyMove : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            Debug.Log("chasing off");
             chasing = false;
         }
     }

@@ -52,15 +52,8 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("You died");
             anim.SetTrigger("Dead");
-            gameObject.transform.position = respawnPt.position;
             GetComponent<CharacterController>().enabled = false;
-        }
-    }
-
-    private void LateUpdate()
-    {
-        if (GetComponent<CharacterController>().enabled == false)
-        {
+            gameObject.transform.position = respawnPt.position;
             GetComponent<CharacterController>().enabled = true;
         }
     }
