@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -13,11 +14,16 @@ public class PlayerMove : MonoBehaviour
     private Vector3 lastPosition;
     private Vector3 playerVelocity;
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelLoaded;
+    }
+
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
         controller = GetComponentInChildren<CharacterController>();
-        gameObject.transform.position = respawnPt.position;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()
@@ -52,9 +58,23 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("You died");
             anim.SetTrigger("Dead");
-            GetComponent<CharacterController>().enabled = false;
-            gameObject.transform.position = respawnPt.position;
-            GetComponent<CharacterController>().enabled = true;
+            Respawn();
         }
+    }
+
+    private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "MainMenuScene")
+        {
+            respawnPt = GameObject.Find("RespawnPt").transform;
+            Respawn();
+        }
+    }
+
+    public void Respawn()
+    {
+        GetComponent<CharacterController>().enabled = false;
+        gameObject.transform.position = respawnPt.position;
+        GetComponent<CharacterController>().enabled = true;
     }
 }
