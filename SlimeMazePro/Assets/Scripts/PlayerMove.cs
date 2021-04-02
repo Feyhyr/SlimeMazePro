@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviour
 
     private Touch touch;
 
+    public bool controls = true;
+
     [SerializeField] private bl_Joystick Joystick;
 
     private void OnEnable()
@@ -33,55 +35,58 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        //Movement
-        if (controller.isGrounded && playerVelocity.y < 0)
+        if (controls)
         {
-            playerVelocity.y = 0f;
-        }
+            //Movement
+            if (controller.isGrounded && playerVelocity.y < 0)
+            {
+                playerVelocity.y = 0f;
+            }
 
 #if UNITY_ANDROID
 
-        speedMultiplier = 0.2f;
+            speedMultiplier = 0.2f;
 
-        Vector3 Jmove = new Vector3(Joystick.Horizontal, 0, Joystick.Vertical);
+            Vector3 Jmove = new Vector3(Joystick.Horizontal, 0, Joystick.Vertical);
 
-        controller.Move(Jmove * Time.deltaTime * playerSpeed * speedMultiplier);
+            controller.Move(Jmove * Time.deltaTime * playerSpeed * speedMultiplier);
 
-        if (Jmove != Vector3.zero)
-        {
-            gameObject.transform.forward = Jmove;
-        }
+            if (Jmove != Vector3.zero)
+            {
+                gameObject.transform.forward = Jmove;
+            }
 
-        playerVelocity.y += -9.81f * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+            playerVelocity.y += -9.81f * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
 
 #endif
 
 #if UNITY_EDITOR
 
-        joystick.SetActive(false);
+            joystick.SetActive(false);
 
-        speedMultiplier = 1f;
+            speedMultiplier = 1f;
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        controller.Move(move * Time.deltaTime * playerSpeed * speedMultiplier);
+            controller.Move(move * Time.deltaTime * playerSpeed * speedMultiplier);
 
-        if (move != Vector3.zero)
-        {
-            gameObject.transform.forward = move;
-        }
+            if (move != Vector3.zero)
+            {
+                gameObject.transform.forward = move;
+            }
 
-        playerVelocity.y += -9.81f * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+            playerVelocity.y += -9.81f * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
 
 #endif
 
-        // Speed is the distance between my current position - last position over time
-        float speed = Vector3.Distance(lastPosition, transform.position) / Time.deltaTime;
+            // Speed is the distance between my current position - last position over time
+            float speed = Vector3.Distance(lastPosition, transform.position) / Time.deltaTime;
 
-        anim.SetFloat("Speed", speed);
-        lastPosition = this.transform.position;
+            anim.SetFloat("Speed", speed);
+            lastPosition = this.transform.position;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -110,5 +115,14 @@ public class PlayerMove : MonoBehaviour
         GetComponent<CharacterController>().enabled = false;
         gameObject.transform.position = respawnPt.position;
         GetComponent<CharacterController>().enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Win"))
+        {
+            controls = false;
+            Respawn();
+        }
     }
 }

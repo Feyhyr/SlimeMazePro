@@ -11,6 +11,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void Start()
     {
+        target = GameObject.Find("Player").transform;
         offset = transform.position - target.transform.position;
     }
 

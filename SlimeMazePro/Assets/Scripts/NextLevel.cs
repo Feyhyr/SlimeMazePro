@@ -17,5 +17,9 @@ public class NextLevel : MonoBehaviour
     public void RestartLevel()
     {
         winScreen.SetActive(false);
+
+        GameObject player = GameObject.Find("Player");
+        PlayerMove p = player.GetComponent<PlayerMove>();
+        p.controls = true;
     }
 }

@@ -22,6 +22,7 @@ public class EnemyMove : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(waypoints[currentWaypoint].position);
+        target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -38,11 +39,6 @@ public class EnemyMove : MonoBehaviour
             {
                 Debug.Log("I see you");
                 chasing = true;
-
-                /*if (hit.transform.tag == "Player")
-                {
-                    chasing = true;
-                }*/
             }
         }
         else if (distanceToTarget > maximumTargetDistance && chasing)

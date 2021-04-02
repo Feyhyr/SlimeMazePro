@@ -1572,19 +1572,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 787879522}
         m_MethodName: RestartLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1085372185}
-        m_MethodName: Respawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1791,7 +1780,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643839512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555579657}
+        m_MethodName: SceneLoad
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level2Scene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643839512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710581e9538b80141883e9408d6645f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 0}
+  winScreen: {fileID: 1236376360}
 --- !u!65 &787879523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2539,7 +2539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.33695403, y: -0, z: -0, w: 0.94152117}
-  m_LocalPosition: {x: 0.34702796, y: 3.65, z: -15.24}
+  m_LocalPosition: {x: 0.34702796, y: 3.65, z: -20.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2557,7 +2557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392c1e91bfaf7314da6c3adb10f459fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1085372187}
+  target: {fileID: 0}
   SmoothFactor: 1
 --- !u!1 &1018434328
 GameObject:
@@ -2922,7 +2922,7 @@ Transform:
   - {fileID: 701705038}
   - {fileID: 1937217956}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071847747
 GameObject:
@@ -3020,7 +3020,7 @@ Transform:
   - {fileID: 1226621612}
   - {fileID: 1432404473}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1085372184
 GameObject:
@@ -3087,7 +3087,7 @@ Transform:
   m_Children:
   - {fileID: 275501704}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108453000
 GameObject:
@@ -3893,7 +3893,7 @@ Transform:
   - {fileID: 217422408}
   - {fileID: 1382616167}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236376360
 GameObject:
@@ -4249,7 +4249,7 @@ Transform:
   - {fileID: 1658360149}
   - {fileID: 1843182355}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432404472
 GameObject:
@@ -4767,7 +4767,7 @@ Transform:
   - {fileID: 54940691}
   - {fileID: 510668222}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611123877
 GameObject:
@@ -5680,5 +5680,5 @@ Transform:
   - {fileID: 1806364830}
   - {fileID: 1018434329}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
