@@ -753,10 +753,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: bde2dc6a-bc80-43b1-a2fe-a501cddc1fb0
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: SlimeMazePro
+  organizationId: astrigera
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
