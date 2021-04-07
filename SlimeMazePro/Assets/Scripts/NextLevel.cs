@@ -5,6 +5,8 @@ using UnityEngine;
 public class NextLevel : MonoBehaviour
 {
     public GameObject winScreen;
+    [Space(10)]
+    public List<GameObject> coins;
 
     private void OnTriggerEnter(Collider other)
     {

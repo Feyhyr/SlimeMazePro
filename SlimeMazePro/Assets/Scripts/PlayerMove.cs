@@ -19,7 +19,25 @@ public class PlayerMove : MonoBehaviour
 
     public bool controls = true;
 
+    private GameObject gm;
+    private GameManager gameMngr;
+
     [SerializeField] private bl_Joystick Joystick;
+
+    static PlayerMove instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnEnable()
     {
@@ -30,6 +48,10 @@ public class PlayerMove : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         controller = GetComponentInChildren<CharacterController>();
+
+        gm = GameObject.Find("GameManager");
+        gameMngr = gm.GetComponent<GameManager>();
+
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -95,13 +117,20 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("You died");
             anim.SetTrigger("Dead");
+            gameMngr.currentLevelCoins = 0;
+            gameMngr.LoseLive();
             Respawn();
         }
     }
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "MainMenuScene")
+        if (scene.name == "GameOverScene")
+        {
+            gameObject.SetActive(false);
+        }
+
+        else if (scene.name != "MainMenuScene")
         {
             joystick = GameObject.Find("Joystick");
             Joystick = FindObjectOfType<bl_Joystick>();
@@ -112,6 +141,13 @@ public class PlayerMove : MonoBehaviour
 
     public void Respawn()
     {
+        GameObject nl = GameObject.Find("WinArea");
+        NextLevel level = nl.GetComponent<NextLevel>();
+        for (int i = 0; i < level.coins.Count; i++)
+        {
+            level.coins[i].SetActive(true);
+        }
+
         GetComponent<CharacterController>().enabled = false;
         gameObject.transform.position = respawnPt.position;
         GetComponent<CharacterController>().enabled = true;
@@ -122,6 +158,8 @@ public class PlayerMove : MonoBehaviour
         if (other.CompareTag("Win"))
         {
             controls = false;
+            gameMngr.totalCoins += gameMngr.currentLevelCoins;
+            gameMngr.currentLevelCoins = 0;
             Respawn();
         }
     }
