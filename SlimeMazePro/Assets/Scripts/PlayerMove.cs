@@ -51,8 +51,6 @@ public class PlayerMove : MonoBehaviour
 
         gm = GameObject.Find("GameManager");
         gameMngr = gm.GetComponent<GameManager>();
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()

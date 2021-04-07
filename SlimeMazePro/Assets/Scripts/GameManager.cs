@@ -9,12 +9,15 @@ public class GameManager : MonoBehaviour
     public int totalCoins;
     public int currentLevelCoins;
     public int totalLives = 2;
+    public int currentLives;
 
     public Text livesText;
 
     public GameObject player;
 
     static GameManager instance;
+
+    public const string prefLives = "prefLives";
 
     void Awake()
     {
@@ -27,16 +30,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        //PlayerPrefs.SetInt("prefLives", 2);
+        totalLives = PlayerPrefs.GetInt(prefLives);
     }
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelLoaded;
-    }
-
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void GetCoin()
@@ -46,12 +46,18 @@ public class GameManager : MonoBehaviour
 
     public void LoseLive()
     {
-        totalLives -= 1;
+        currentLives -= 1;
 
-        if (totalLives == 0)
+        if (currentLives == 0)
         {
             SceneManager.LoadScene("GameOverScene");
         }
+    }
+
+    public void IncreaseMaxLives()
+    {
+        totalLives += 1;
+        PlayerPrefs.GetInt(prefLives, totalLives);
     }
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
@@ -61,17 +67,22 @@ public class GameManager : MonoBehaviour
         if (scene.name == "MainMenuScene")
         {
             player.SetActive(false);
-            totalLives = 2;
+            currentLives = totalLives;
         }
 
         else if (scene.name == "Level1Scene" || scene.name == "Level2Scene")
         {
             player.SetActive(true);
         }
+
+        if (scene.name == "Level1Scene")
+        {
+            currentLives = totalLives;
+        }
     }
 
     private void LateUpdate()
     {
-        livesText.text = totalLives.ToString();
+        livesText.text = currentLives.ToString();
     }
 }
