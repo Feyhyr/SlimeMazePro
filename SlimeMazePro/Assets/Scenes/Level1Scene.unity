@@ -1752,6 +1752,7 @@ GameObject:
   - component: {fileID: 643839513}
   - component: {fileID: 643839512}
   - component: {fileID: 643839511}
+  - component: {fileID: 643839514}
   m_Layer: 5
   m_Name: NextlevelBTN
   m_TagString: Untagged
@@ -1833,6 +1834,17 @@ MonoBehaviour:
           m_StringArgument: Level2Scene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 643839514}
+        m_MethodName: recordEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643839512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,6 +1882,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643839509}
   m_CullTransparentMesh: 0
+--- !u!114 &643839514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643839509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e4d8fba79af764092ce2f2db53c573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Start Level
+  key: 
+  value: 
 --- !u!1001 &701705036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3385,6 +3412,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208318185}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1209890046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209890048}
+  - component: {fileID: 1209890047}
+  m_Layer: 0
+  m_Name: AnalyticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209890047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209890046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71802f8a5f0bbd245bece4aafe8fad49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1209890048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209890046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 945.59705, y: 523.9879, z: -235.88118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210912554
 GameObject:
   m_ObjectHideFlags: 0
