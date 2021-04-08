@@ -10,6 +10,21 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void SceneLoadLevel()
+    {
+        GameObject gm = GameObject.Find("GameManager");
+        GameManager gameMngr = gm.GetComponent<GameManager>();
+
+        if (gameMngr.isLevel1)
+        {
+            SceneManager.LoadScene("Level1Scene");
+        }
+        else if (gameMngr.isLevel2)
+        {
+            SceneManager.LoadScene("Level2Scene");
+        }
+    }
+
     public void QuitGame()
     {
         Debug.Log("Game has quit!");
