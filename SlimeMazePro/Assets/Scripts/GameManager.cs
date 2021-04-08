@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public int totalCoins;
     public int currentLevelCoins;
-    public int totalLives = 2;
+    public int totalLives;
     public int currentLives;
 
     public Text livesText;
@@ -30,8 +30,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        PlayerPrefs.SetInt("prefLives", 2);
+
+        if (!(PlayerPrefs.HasKey(prefLives)))
+        {
+            PlayerPrefs.SetInt(prefLives, 2);
+        }
         totalLives = PlayerPrefs.GetInt(prefLives);
+        currentLives = totalLives;
     }
 
     private void OnEnable()
@@ -58,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         totalLives += 1;
         currentLives = totalLives;
-        PlayerPrefs.GetInt(prefLives, totalLives);
+        PlayerPrefs.SetInt(prefLives, totalLives);
     }
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
