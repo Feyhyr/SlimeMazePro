@@ -5214,3 +5214,4 @@ MonoBehaviour:
   controls: 1
   Joystick: {fileID: 0}
   tempNum: 0
+  audioSFX: {fileID: 8300000, guid: 4b996024d20180c42bd6c24ef0b75c23, type: 3}
