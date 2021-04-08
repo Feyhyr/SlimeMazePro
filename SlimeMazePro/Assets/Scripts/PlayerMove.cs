@@ -28,6 +28,13 @@ public class PlayerMove : MonoBehaviour
 
     public int tempNum;
 
+    public AudioClip audioSFX;
+
+    public void PlayAudio()
+    {
+        AudioManager.Instance.Play(audioSFX);
+    }
+
     void Awake()
     {
         if (instance == null)
@@ -116,6 +123,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Debug.Log("You died");
+            PlayAudio();
             anim.SetTrigger("Dead");
             gameMngr.currentLevelCoins = 0;
             gameMngr.LoseLive();
