@@ -37,7 +37,7 @@ public class Advertisements : MonoBehaviour, IUnityAdsListener
             yield return new WaitForSeconds(0.5f);
         }
 
-        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
+        Advertisement.Banner.SetPosition(BannerPosition.TOP_RIGHT);
         // Load banner using my placementID
         Advertisement.Banner.Show(placementIdBanner);
     }
