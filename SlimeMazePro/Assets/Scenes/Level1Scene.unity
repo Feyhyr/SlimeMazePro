@@ -895,6 +895,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &217422407
@@ -991,6 +996,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &287170895
@@ -2335,6 +2345,7 @@ MonoBehaviour:
   - {fileID: 703496119}
   - {fileID: 425272402}
   - {fileID: 1419840122}
+  audioSFX: {fileID: 8300000, guid: 19b39f959f4b2324cb9d58b252e2ed2c, type: 3}
 --- !u!65 &787879523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2779,6 +2790,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &963194225
@@ -3016,6 +3032,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 701705037}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &1048188016
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3113,6 +3131,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1226621611}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &1071847749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4093,6 +4113,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1658360148}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &1411930110
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4556,6 +4578,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 54940690}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &1576428396
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5056,6 +5080,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &1893543164
@@ -5326,6 +5355,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &2120615495
@@ -5590,6 +5624,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1806364829}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &2144757566
 NavMeshAgent:
   m_ObjectHideFlags: 0

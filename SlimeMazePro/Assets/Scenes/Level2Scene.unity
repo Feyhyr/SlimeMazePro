@@ -960,6 +960,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!4 &313939634 stripped
@@ -1874,6 +1879,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1577002961}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &673869717
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2079,6 +2086,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1738997847}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &767179738
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2428,6 +2437,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 766639271}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &844394082
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3335,6 +3346,7 @@ MonoBehaviour:
   - {fileID: 313939635}
   - {fileID: 1775282253}
   - {fileID: 1555347839}
+  audioSFX: {fileID: 8300000, guid: 19b39f959f4b2324cb9d58b252e2ed2c, type: 3}
 --- !u!65 &1195238401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4364,6 +4376,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!1 &1555347839 stripped
@@ -5120,6 +5137,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!4 &1775282252 stripped
@@ -5868,6 +5890,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 1051756304}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &2004912260
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6100,6 +6124,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6178351638294947517, guid: 8f226a393243a0141bace5fd6b60bafa,
+        type: 3}
+      propertyPath: audioSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
 --- !u!4 &2087302989 stripped
@@ -6367,6 +6396,8 @@ MonoBehaviour:
   maximumTargetDistance: 5
   chasing: 0
   raycastPoint: {fileID: 98815469}
+  SfxAlert: {fileID: 8300000, guid: 84402515f2247ae4c9f7403b7cee2b69, type: 3}
+  SfxLeave: {fileID: 8300000, guid: 391b860366e7b15429be4b9ca212a932, type: 3}
 --- !u!195 &2104824162
 NavMeshAgent:
   m_ObjectHideFlags: 0

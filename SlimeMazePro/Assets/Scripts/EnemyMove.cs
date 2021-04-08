@@ -17,6 +17,19 @@ public class EnemyMove : MonoBehaviour
     [Space(10)]
     public Transform raycastPoint;
 
+    public AudioClip SfxAlert;
+    public AudioClip SfxLeave;
+
+    public void PlayAudioAlert()
+    {
+        AudioManager.Instance.Play(SfxAlert);
+    }
+
+    public void PlayAudioLeave()
+    {
+        AudioManager.Instance.Play(SfxLeave);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +51,13 @@ public class EnemyMove : MonoBehaviour
             if (Physics.Raycast(raycastPoint.position, target.position - raycastPoint.position, out hit))
             {
                 Debug.Log("I see you");
+                PlayAudioAlert();
                 chasing = true;
             }
         }
         else if (distanceToTarget > maximumTargetDistance && chasing)
         {
+            PlayAudioLeave();
             chasing = false;
         }
 

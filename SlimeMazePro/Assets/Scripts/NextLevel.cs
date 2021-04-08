@@ -8,10 +8,18 @@ public class NextLevel : MonoBehaviour
     [Space(10)]
     public List<GameObject> coins;
 
+    public AudioClip audioSFX;
+
+    public void PlayAudio()
+    {
+        AudioManager.Instance.Play(audioSFX);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            PlayAudio();
             winScreen.SetActive(true);
         }
     }
