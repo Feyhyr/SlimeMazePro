@@ -19,6 +19,8 @@ public class Advertisements : MonoBehaviour, IUnityAdsListener
     // Start is called before the first frame update
     void Start()
     {
+        //DontDestroyOnLoad(this.gameObject);
+
         // this is the listener for the ad services
         Advertisement.AddListener(this);
 
