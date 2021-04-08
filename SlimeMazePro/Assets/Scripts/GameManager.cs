@@ -14,10 +14,16 @@ public class GameManager : MonoBehaviour
     public Text livesText;
 
     public GameObject player;
+    PlayerMove p;
 
     static GameManager instance;
 
     public const string prefLives = "prefLives";
+
+    public const string prefScore = "prefScore";
+
+    public bool isLevel1;
+    public bool isLevel2;
 
     void Awake()
     {
@@ -37,6 +43,8 @@ public class GameManager : MonoBehaviour
         }
         totalLives = PlayerPrefs.GetInt(prefLives);
         currentLives = totalLives;
+
+        PlayerPrefs.SetInt(prefScore, 0);
     }
 
     private void OnEnable()
@@ -44,14 +52,19 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnLevelLoaded;
     }
 
+    private void Start()
+    {
+        p = player.GetComponent<PlayerMove>();
+    }
+
     public void GetCoin()
     {
-        currentLevelCoins++;
+        currentLevelCoins += 50;
     }
 
     public void LoseLive()
     {
-        currentLives -= 1;
+        currentLives--;
 
         if (currentLives == 0)
         {
@@ -61,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseMaxLives()
     {
-        totalLives += 1;
+        totalLives++;
         currentLives = totalLives;
         PlayerPrefs.SetInt(prefLives, totalLives);
     }
@@ -74,16 +87,27 @@ public class GameManager : MonoBehaviour
         {
             player.SetActive(false);
             currentLives = totalLives;
+            totalCoins = 0;
+            isLevel1 = false;
+            isLevel2 = false;
         }
 
         else if (scene.name == "Level1Scene" || scene.name == "Level2Scene")
         {
             player.SetActive(true);
+            p.controls = true;
         }
 
         if (scene.name == "Level1Scene")
         {
             currentLives = totalLives;
+            isLevel1 = true;
+        }
+
+        if (scene.name == "Level2Scene")
+        {
+            isLevel1 = false;
+            isLevel2 = true;
         }
     }
 

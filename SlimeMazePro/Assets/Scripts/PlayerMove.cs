@@ -26,6 +26,8 @@ public class PlayerMove : MonoBehaviour
 
     static PlayerMove instance;
 
+    public int tempNum;
+
     void Awake()
     {
         if (instance == null)
@@ -157,6 +159,7 @@ public class PlayerMove : MonoBehaviour
         {
             controls = false;
             gameMngr.totalCoins += gameMngr.currentLevelCoins;
+            tempNum = gameMngr.totalCoins - gameMngr.currentLevelCoins;
             gameMngr.currentLevelCoins = 0;
             Respawn();
         }

@@ -3098,7 +3098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalCoins: 0
   currentLevelCoins: 0
-  totalLives: 2
+  totalLives: 0
   currentLives: 0
   livesText: {fileID: 0}
   player: {fileID: 6051682754677290082}
