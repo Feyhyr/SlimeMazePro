@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //PlayerPrefs.SetInt("prefLives", 2);
+        PlayerPrefs.SetInt("prefLives", 2);
         totalLives = PlayerPrefs.GetInt(prefLives);
     }
 
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseMaxLives()
     {
         totalLives += 1;
+        currentLives = totalLives;
         PlayerPrefs.GetInt(prefLives, totalLives);
     }
 
