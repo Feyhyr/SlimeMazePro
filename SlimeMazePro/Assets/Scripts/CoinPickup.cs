@@ -16,7 +16,10 @@ public class CoinPickup : MonoBehaviour
         if (other.tag == "Player")
         {
             PlayAudio();
-            gameObject.SetActive(false);
+
+            CoinManager coinMngr = GameObject.Find("CoinManager").GetComponent<CoinManager>();
+            coinMngr.ChangeIndex();
+            coinMngr.PickupEvent();
 
             GameObject gm = GameObject.Find("GameManager");
             GameManager gameMngr = gm.GetComponent<GameManager>();

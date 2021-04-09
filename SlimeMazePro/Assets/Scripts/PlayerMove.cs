@@ -149,13 +149,6 @@ public class PlayerMove : MonoBehaviour
 
     public void Respawn()
     {
-        GameObject nl = GameObject.Find("WinArea");
-        NextLevel level = nl.GetComponent<NextLevel>();
-        for (int i = 0; i < level.coins.Count; i++)
-        {
-            level.coins[i].SetActive(true);
-        }
-
         GetComponent<CharacterController>().enabled = false;
         gameObject.transform.position = respawnPt.position;
         GetComponent<CharacterController>().enabled = true;

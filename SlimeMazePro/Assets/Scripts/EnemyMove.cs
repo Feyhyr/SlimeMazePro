@@ -87,6 +87,10 @@ public class EnemyMove : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             chasing = false;
+
+            CoinManager coin = GameObject.Find("CoinManager").GetComponent<CoinManager>();
+            coin.index = 0;
+            coin.PickupEvent();
         }
     }
 }

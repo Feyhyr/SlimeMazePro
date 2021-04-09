@@ -131,4 +131,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e82fceb281520419139f360614c2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAmount: 0
+  audioSFX: {fileID: 8300000, guid: 6526d92d8e283154eb002b3fca3b4f8f, type: 3}

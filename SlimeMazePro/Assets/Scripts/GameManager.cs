@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public bool isLevel1;
     public bool isLevel2;
 
+    public int tempHearts;
+
     void Awake()
     {
         if (instance == null)
