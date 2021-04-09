@@ -31,7 +31,6 @@ public class SceneLoader : MonoBehaviour
         }
         else if (gameMngr.isLevel2)
         {
-            gameMngr.tempHearts = gameMngr.currentLives;
             SceneManager.LoadScene("Level2Scene");
         }
     }

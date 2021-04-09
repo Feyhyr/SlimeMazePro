@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
 
         if (scene.name == "Level2Scene")
         {
+            currentLives = tempHearts;
             isLevel1 = false;
             isLevel2 = true;
         }
