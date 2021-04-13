@@ -20,6 +20,8 @@ public class EnemyMove : MonoBehaviour
     public AudioClip SfxAlert;
     public AudioClip SfxLeave;
 
+    CoinManager coinM;
+
     public void PlayAudioAlert()
     {
         AudioManager.Instance.Play(SfxAlert);
@@ -36,6 +38,7 @@ public class EnemyMove : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(waypoints[currentWaypoint].position);
         target = GameObject.Find("Player").transform;
+        coinM = GameObject.Find("CoinManager").GetComponent<CoinManager>();
     }
 
     // Update is called once per frame
@@ -88,9 +91,9 @@ public class EnemyMove : MonoBehaviour
         {
             chasing = false;
 
-            CoinManager coin = GameObject.Find("CoinManager").GetComponent<CoinManager>();
-            coin.index = 0;
-            coin.PickupEvent();
+            //CoinManager coin = GameObject.Find("CoinManager").GetComponent<CoinManager>();
+            coinM.index = 0;
+            coinM.PickupEvent();
         }
     }
 }

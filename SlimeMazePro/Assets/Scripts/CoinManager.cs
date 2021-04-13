@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    public List<GameObject> starPosition;
-    public GameObject prefab;
+    public List<Transform> starPosition;
+    public GameObject starPrefab;
 
     private GameObject coinObject;
     public int index = 0;
 
     private void Start()
     {
-        coinObject = Instantiate(prefab, starPosition[0].transform);
+        coinObject = Instantiate(starPrefab, starPosition[0]);
     }
 
     public void ChangeIndex()
@@ -26,6 +26,6 @@ public class CoinManager : MonoBehaviour
 
     public void PickupEvent()
     {
-        coinObject.transform.position = starPosition[index].transform.position;
+        coinObject.transform.position = starPosition[index].position;
     }
 }

@@ -2774,12 +2774,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starPosition:
-  - {fileID: 1508433486}
-  - {fileID: 835398533}
-  - {fileID: 239472744}
-  - {fileID: 236542363}
-  - {fileID: 1207071035}
-  prefab: {fileID: 1000010986879176, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
+  - {fileID: 1508433487}
+  - {fileID: 835398534}
+  - {fileID: 239472745}
+  - {fileID: 236542364}
+  - {fileID: 1207071036}
+  starPrefab: {fileID: 1000010986879176, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
   index: 0
 --- !u!4 &975354587
 Transform:
