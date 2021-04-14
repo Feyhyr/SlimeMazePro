@@ -2520,7 +2520,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239879913
 MonoBehaviour:
@@ -2542,7 +2542,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5d36f2fb50f33674d90ac9ce0cdc76f9, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -2554,7 +2554,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits go here.
+  m_Text: 'Cynthia Chang (Lead Programmer)
+
+    Lucas Nicolaides (Audio & Level Designer)
+
+    Shaina
+    Muli (Artist, UI Designer)'
 --- !u!222 &1239879914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3264,9 +3269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e4d8fba79af764092ce2f2db53c573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventName: Start Level
-  key: 
-  value: 
+  eventName: Start
+  key: Level
+  value: 1
 --- !u!1 &1898541613
 GameObject:
   m_ObjectHideFlags: 0

@@ -1831,9 +1831,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e4d8fba79af764092ce2f2db53c573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventName: Start Level
-  key: 
-  value: 
+  eventName: Start
+  key: Level
+  value: 2
 --- !u!1001 &701705036
 PrefabInstance:
   m_ObjectHideFlags: 0
