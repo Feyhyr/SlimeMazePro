@@ -1772,7 +1772,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 643839514}
-        m_MethodName: recordEvent
+        m_MethodName: recordEventDictionary
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
