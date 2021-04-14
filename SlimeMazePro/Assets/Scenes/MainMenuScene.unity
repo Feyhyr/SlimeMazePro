@@ -2263,6 +2263,7 @@ MonoBehaviour:
   menuMusic: {fileID: 8300000, guid: fdfdffd2890deaa4da1d3b255eb75850, type: 3}
   gameMusic: {fileID: 8300000, guid: 6337a511e76eb744696a7f9f8753e3da, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 8353817b75988ce409661bafe46b84d6, type: 3}
+  gameWinMusic: {fileID: 8300000, guid: a1c762098f9ee5a43a2ed1a0eb3ea225, type: 3}
 --- !u!1 &1117616432
 GameObject:
   m_ObjectHideFlags: 0
