@@ -19,6 +19,4 @@ public class AudioManager : Singleton<AudioManager>
         audio.clip = sfxToPlay;
         audio.Play();
     }
-
-
 }

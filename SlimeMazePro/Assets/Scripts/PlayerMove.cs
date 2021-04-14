@@ -133,7 +133,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "GameOverScene")
+        if (scene.name == "GameOverScene" || scene.name == "GameWinScene")
         {
             gameObject.SetActive(false);
         }
