@@ -76,13 +76,13 @@ public class PlayerMove : MonoBehaviour
 
             speedMultiplier = 0.2f;
 
-            Vector3 Jmove = new Vector3(Joystick.Horizontal, 0, Joystick.Vertical);
+            Vector3 jMove = new Vector3(Joystick.Horizontal, 0, Joystick.Vertical);
 
-            controller.Move(Jmove * Time.deltaTime * playerSpeed * speedMultiplier);
+            controller.Move(jMove * Time.deltaTime * playerSpeed * speedMultiplier);
 
-            if (Jmove != Vector3.zero)
+            if (jMove != Vector3.zero)
             {
-                gameObject.transform.forward = Jmove;
+                gameObject.transform.forward = jMove;
             }
 
             playerVelocity.y += -9.81f * Time.deltaTime;
@@ -94,7 +94,7 @@ public class PlayerMove : MonoBehaviour
 
             joystick.SetActive(false);
 
-            speedMultiplier = 1f;
+            speedMultiplier = 1.2f;
 
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 

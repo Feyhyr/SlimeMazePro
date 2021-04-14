@@ -30,7 +30,7 @@ public class MusicManager : Singleton<MusicManager>
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MainMenuScene" || scene.name == "GameWinScene")
+        if (scene.name == "MainMenuScene")
         {
             Play(menuMusic);
         }

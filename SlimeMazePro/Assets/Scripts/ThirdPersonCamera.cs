@@ -19,6 +19,7 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         Vector3 newPos = target.position + offset;
 
-        transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
+        transform.position = newPos;//Vector3.Slerp(transform.position, newPos, SmoothFactor);
+        //transform.LookAt(target);
     }
 }
