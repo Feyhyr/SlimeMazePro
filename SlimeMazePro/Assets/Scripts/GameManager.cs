@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public Text livesText;
 
+    public Text starsText;
+
     public GameObject player;
     PlayerMove p;
 
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
 
         else if (scene.name == "Level1Scene" || scene.name == "Level2Scene")
         {
+            starsText = GameObject.Find("StarsNumTxt").GetComponent<Text>();
             player.SetActive(true);
             p.controls = true;
         }
@@ -117,5 +120,10 @@ public class GameManager : MonoBehaviour
     private void LateUpdate()
     {
         livesText.text = currentLives.ToString();
+
+        if (isLevel1 || isLevel2)
+        {
+            starsText.text = (totalCoins + currentLevelCoins).ToString();
+        }
     }
 }

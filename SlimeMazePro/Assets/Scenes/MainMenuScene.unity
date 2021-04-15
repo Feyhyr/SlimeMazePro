@@ -3159,6 +3159,7 @@ MonoBehaviour:
   totalLives: 0
   currentLives: 0
   livesText: {fileID: 0}
+  starsText: {fileID: 0}
   player: {fileID: 6051682754677290082}
   isLevel1: 0
   isLevel2: 0
