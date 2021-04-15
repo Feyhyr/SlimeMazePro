@@ -742,8 +742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 1000, y: 570.5676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448928487
 MonoBehaviour:
@@ -784,7 +784,7 @@ MonoBehaviour:
     - Mobile: Use the touch screen
     joystick for movement.
 
-    - PC: Use WASD keys for movement.'
+    - PC: Use WASD or arrow keys for movement.'
 --- !u!222 &448928488
 CanvasRenderer:
   m_ObjectHideFlags: 0
