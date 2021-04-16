@@ -11,10 +11,10 @@ public class AudioManager : Singleton<AudioManager>
 
     public void Play(AudioClip sfxToPlay)
     {
-        /*if (audio.isPlaying)
+        if (audio.isPlaying)
         {
             audio.Stop();
-        }*/
+        }
 
         audio.clip = sfxToPlay;
         audio.Play();
